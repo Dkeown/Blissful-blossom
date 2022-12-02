@@ -3,7 +3,7 @@ body{
   margin: 0;
   padding: 0;
   /* Do not change margin or padding */
-  background: #f5f7fa;
+  background: #D7FFCD;
 /* NOTE: do not change the background in media query */
 font-family: 'Open Sans', helvetica, sans-serif;
 /* NOTE you can change the fonts but always have a backup */
@@ -15,8 +15,8 @@ font-family: 'Open Sans', helvetica, sans-serif;
 
 /* NOTE do not change nav styles below without checking with April */
 .mainNav {
-  background: #efefef;
-  color: #1a1b18;
+  background: #147504;
+  color: antiquewhite;
   height: 60px;
   position: relative;
 }
@@ -24,8 +24,8 @@ font-family: 'Open Sans', helvetica, sans-serif;
   text-decoration: none;
 }
 .mainNav .menu {
-  background: #efefef;
-  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  background: #147504;
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0);
   border-top: 1px solid #efefef;
   display: none;
   list-style: none;
@@ -34,12 +34,12 @@ font-family: 'Open Sans', helvetica, sans-serif;
   text-align: center;
   /*POSITION*/
   position: absolute;
-  top: 60px;
+  top: 0px;
   right: 0;
   left: 0;
 }
 .mainNav .menu a {
-  color: #292938;
+  color: antiquewhite;
   border-bottom: 1px solid #efefef;
   font-weight: bold;
   display: block;
@@ -47,7 +47,7 @@ font-family: 'Open Sans', helvetica, sans-serif;
 }
 .mainNav .menu a:hover {
   background: #292938;
-  color: #efefef;
+  color: pink;
 }
 .mainNav .navBars {
   display: inline-block;
@@ -77,9 +77,9 @@ font-family: 'Open Sans', helvetica, sans-serif;
 /* NOTE: END Navigation styles --------------------- */
 
 .wrapper{
-  background: #f5f7fa;
-  margin: auto;
-  width:90%;
+  background: #FF1010;
+  margin: 0;
+  width:100%;
   /* Width with a margin auto keeps the content from touching the edge */
   padding: 20px;
 }
@@ -90,16 +90,44 @@ font-family: 'Open Sans', helvetica, sans-serif;
 .grid div{
 
 }
-
+.noedge{
+  width:90%;
+  margin: auto;
+  display:block;
+}
 img{
   /* width:100%; */
   max-width: 100%;
+  position: center;
 }
 /* NOTE: All other images will need a class to style the width if you want them a diffrent size */
 
 h1{
+  font-family: 'Life Savers', helvetica, sans-serif;
+  text-color: white;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 0px;
+}
+
+h2{
+  font-family: 'Life Savers', helvetica, sans-serif;
+  text-decoration-color: white;
+  text-align: center;
+  padding-top: 0px;
+}
+
+h3{
+  font-family: 'Life Savers', helvetica, sans-serif;
+  text-decoration-color: white;
+  text-align: center;
+  padding-top: 0px;
+}
+
+h4{
+  font-family: 'Life Savers', helvetica, sans-serif;
+  text-decoration-color: white;
+  text-align: center;
+  padding-top: 0px;
 }
 
 footer{
@@ -112,31 +140,36 @@ footer{
 
 
 /* NOTE: START MEDIUM SIZE DISPLAYS ---------------------*/
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 500px) {
 
 
 
     .medium-size{
-      max-width: 700px;
+      max-width: 500px;
     }
 
     .two-col{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-column-gap: 5px;
+        grid-column-gap: 25px;
+
     }
     .center-this{
         margin-right: auto;
         margin-left: auto;
         display: block;
+        max-width: 500px;
         /* Note you can use this to center an element but you have to add a width */
     }
 
 
   .grid{
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-column-gap: 5px;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 25px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
   }
   .grid div{
 
@@ -166,14 +199,14 @@ footer{
       /* NOTE LINKS POSITION center*/
       /* float: right; */
       /* NOTE LINKS POSITION to the right*/
-      position: static;
+
     }
     .mainNav .menu li {
       display: inline-block;
     }
     .mainNav .menu a {
       border: none;
-      padding: 20px 10px;
+      padding: none;
     }
 /* NOTE END nav styles --------------------------- */
 
