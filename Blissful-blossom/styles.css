@@ -1,0 +1,404 @@
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* Do not change margin or padding */
+  background: #e8f1ec;
+/* NOTE: do not change the background in media query */
+font-family: 'Open Sans', helvetica, sans-serif;
+/* NOTE you can change the fonts but always have a backup */
+}
+/* NOTE: MOBILE STYLES BELOW --------------------- */
+
+
+
+img{
+  /* width:100%; */
+  max-width: 100%;
+  max-height: 280px;
+}
+/* NOTE: All other images will need a class to style the width if you want them a diffrent size */
+
+
+
+header h1, header h2{
+    color: white;
+}
+h1{
+  font-family: 'Life Savers', helvetica, sans-serif;
+  /* text-color: white; */
+  text-align: center;
+  /* padding-top: 0px; */
+}
+
+h2{
+  font-family: 'Life Savers', helvetica, sans-serif;
+  /* text-decoration-color: white; */
+  text-align: center;
+  /* padding-top: 0px; */
+}
+
+h3{
+  font-family: 'Life Savers', helvetica, sans-serif;
+  /* text-decoration-color: white; */
+  text-align: center;
+  /* padding-top: 0px; */
+}
+
+h4{
+  font-family: 'Life Savers', helvetica, sans-serif;
+  /* text-decoration-color: white; */
+  text-align: center;
+  padding-top: 0px;
+}
+
+
+header{
+    background:#6A994E;
+    padding: 20px 0;
+}
+header h1, header h2{
+    color: white;
+}
+.wrapper{
+  margin: auto;
+  width:90%;
+  /* Width with a margin auto keeps the content from touching the edge */
+  padding: 20px;
+}
+.white{
+    background:white;
+    margin: 0 0 20px 0;
+    padding: 20px;
+}
+
+
+/* NOTE do not change nav styles below without checking with April */
+.mainNav {
+  background: #147504;
+  color: antiquewhite;
+  height: 58px;
+  position: relative;
+  font-family: 'Life Savers', helvetica, sans-serif;
+  font-size: 1.3em;
+
+}
+.mainNav a {
+  text-decoration: none;
+}
+.mainNav .menu {
+  background: #147504;
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0);
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  /*POSITION*/
+  position: absolute;
+  top: 0px;
+  right: 0;
+  left: 0;
+  z-index: 6;
+/* Keeps the drop down menu in front of the gallery */
+}
+.mainNav .menu a {
+  color: white;
+  /* Link color */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  display: block;
+  padding: 18px;
+}
+.mainNav .menu a:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: #F2E8CF;
+}
+.mainNav .navBars {
+  display: inline-block;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  float: right;
+  /* NOTE HAMBURGER POSITION to the right*/
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+#xBxHack {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -99999px;
+}
+#xBxHack:checked ~ nav .menu {
+  display: block;
+}
+.navcontainer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px;
+}
+/* NOTE: END Navigation styles --------------------- */
+
+
+
+/* START GALLERY ------------------------------------------- */
+/* https://codepen.io/desandro/pen/emjrBm */
+.gallery-cell {
+  width: 66%;
+  height: 400px;
+  margin-right: 10px;
+  /* background: url("images/imagehead.jpg"); */
+  counter-increment: gallery-cell;
+}
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 400px;
+  font-size: 80px;
+  color: white;
+}
+
+.gallery img{
+    /* Add margin to the top and bottom */
+    width:66%;
+    /* Keep images at a size that alows us to see a preview of the next img */
+}
+.gallery{
+    margin: 40px auto 50px auto;
+    max-width: 400px;
+
+    z-index: 0;
+    /* Keeps the drop down menu in front of the gallery */
+
+}
+/* END GALLERY ------------------------------------------- */
+
+
+.grid{
+    text-align: center;
+    /* This will cnter images sometimes */
+}
+.grid div{
+
+}
+.grid img{
+
+}
+
+
+.noedge{
+  width:90%;
+  margin: auto;
+  display:block;
+}
+
+
+footer{
+  background: rgba(69, 126, 110, 0.67);
+  text-align: center;
+  padding:20px;
+}
+
+/* NOTE: START MEDIUM SIZE DISPLAYS ---------------------*/
+@media only screen and (min-width: 400px) {
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 15px;
+    }
+    .grid h3{
+        height:40px;
+    }
+}/* END 400 displays */
+
+
+
+
+/* NOTE: START MEDIUM SIZE DISPLAYS ---------------------*/
+@media only screen and (min-width: 500px) {
+
+    .medium-size{
+      max-width: 500px;
+    }
+
+    .two-col{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 25px;
+
+    }
+    .center-this{
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        text-align: center;
+        max-width: 80%;
+        /* Note you can use this to center an element but you have to add a width */
+    }
+
+
+  .grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 25px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .grid div{
+
+  }
+
+
+  /* NOTE Do not change nav styles below ------------without help from April*/
+  .mainNav {
+      overflow: hidden;
+    }
+    .mainNav .navBars {
+      display: none;
+    }
+    .mainNav .navcontainer {
+      padding-top: 0;
+      padding-bottom: 0;
+      max-width:100%;
+  /* 	Add max-width:100 to counter act the styles above media query so the links could be all the way to the left or right */
+    }
+    .mainNav .menu {
+      display: block;
+      box-shadow: none;
+      border: none;
+      /* float:left; */
+      /* NOTE LINKS POSITION to the left*/
+      text-align: center;
+      /* NOTE LINKS POSITION center*/
+      /* float: right; */
+      /* NOTE LINKS POSITION to the right*/
+
+    }
+    .mainNav .menu li {
+      display: inline-block;
+    }
+    .mainNav .menu a {
+      border: none;
+    }
+/* NOTE END nav styles --------------------------- */
+
+}/* NOTE: DO NOT DELETE THIS LAST CURLY BRACE */
+/* NOTE END MEDIUM SIZE DISPLAYS ----------------------- */
+/* NOTE START LARGE SCREEN STYLES BELOW ---------------- */
+@media only screen and (min-width: 1200px) {
+
+
+
+    .wrapper{
+        max-width: 1700px;
+    }
+
+
+
+    /* START MOBILE FORM STYLES */
+        .form-container{
+    /*       TO CENTER add AUTO for margin right and left*/
+          margin: 20px auto;
+    /*  WIDTH 100%  FOR MOBILE DEVICES*/
+          width:90%;
+          display:block;
+          font-size:1em;
+        }
+        form p{
+          margin-bottom:5px;
+
+        }
+        label{
+          display:block;
+        }
+        #newsletter input{
+          display:inline;
+          width:auto;
+        }
+        input{
+          /* FOR MOBILE use WIDTH:100% */
+          width:100%;
+          padding:1.7%;
+          margin:1.5% 0;
+          font-size: 1em;
+          border-radius: 4px;
+          border:1px solid #ccc;
+          box-sizing: border-box;
+        }
+        textarea{
+          min-height:100px;
+           /* FOR MOBILE use WIDTH:100% */
+          width: 100%;
+          padding: 2%;
+          margin: 1.5% 0;
+          font-size: 1em;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        button{
+          /* CHANGED COLORS bellow */
+          background: #45A99F;
+          border: 1px solid #45A99F;
+          /* Rounded corners */
+          border-radius: 4px;
+          /* Text color */
+          color:white;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          padding:10px 20px;
+          font-size: 1.1em;
+        }
+      /*        END MOBILE FORM STYLES */
+
+        @media only screen and (min-width: 1000px) {
+     /*         START DESKTOP FORM STYLES */
+          .form-container{
+     /*         CHANGE WIDTH of FORM TO YOUR PREFERENCE */
+            width:50%;
+          }
+          input{
+             /* CHANGE WIDTH TO YOUR PREFERENCE */
+            width:60%;
+          }
+          button{
+            margin-top: 2%;
+            margin-bottom: 2%;
+          }
+        }
+
+.map{
+  width:90%;
+  height:400px;
+  margin:auto;
+}
+/* MOBILE ABOVE
+AND DESKTOP BELOW */
+@media only screen and (min-width:600px){
+  .map{
+    display:inline-block;
+    width:48%;
+    height:60vh;
+    margin-left:0;
+    margin-right:0;
+    vertical-align:top;
+
+  }
+  .group{
+    display:inline-block;
+    margin:auto;
+    width:48%;
+    vertical-align: top;
+
+  }
+}
+
+
+
+
+}/* NOTE: DO NOT DELETE THIS LAST CURLY BRACE */
